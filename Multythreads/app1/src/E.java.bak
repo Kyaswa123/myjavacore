@@ -1,0 +1,38 @@
+
+class C extends Thread
+{
+	@Override
+	public void run()
+	{
+		for (int i = 1; i<= 100; i++)
+		{
+			System.out.println("first thread:" +i);
+		}
+	}
+		
+		
+}
+class D extends Thread
+{
+	@Override
+	public void run()
+	{
+		for (int i = 101; i<= 200; i++)
+		{
+			System.out.println("second thread:" +i);
+		}
+	}
+		
+		
+}
+class E
+{
+	public static void main(String[] args) 
+	{
+		C c1 = new C();
+		System.out.println("Hello World!");
+	}
+}
+// there are two ways to create a thread
+//1. by extends threads 
+//2. runnable interface
